@@ -4,3 +4,147 @@
 *:after {
   box-sizing: border-box;
 }
+
+/*note: black: #04060D; darkblue: #143AA2; light blue: #3E8DE3; */
+
+
+/***** Body *****/
+
+body {
+  font-family: Verdana, Tahoma, Arial, sans-serif;
+  color: #04060D;
+  max-width: 820px;
+}
+
+/***** Header *****/
+
+header {display: inline;}
+header a {text-decoration: none; color: #04060D;}
+header a:hover {color: #143AA2;}
+header span.siteName a {font-size: 2em; font-weight: bold;}
+header div#tools {display: inline; float: right;}
+header div#tools a {text-transform: capitalize;}
+
+/***** Nav *****/
+
+nav ul {
+  padding: 0px;
+  list-style: none;
+  display: flex;
+  background-color: #04060D;}
+nav li {
+  padding: 5px; 
+  width: 20%; 
+  flex: 1;
+  text-align: center;
+  color: #fff;}
+
+  nav li:hover {
+    background-color: #fff;
+    border-bottom: 3px solid #3E8DE3;
+    border-right: 3px solid #3E8DE3;
+    color: #04060D;}
+
+/***** Main *****/
+
+main h1 {font-size: 1.5em;}
+main h2 {font-size: 1.2em;}
+
+div#carPic {position: relative;}
+div#carPic img {width: 100%;}
+div.carPic_float {
+  float: left;
+       position: absolute;
+       left: 0px;
+       top: 0px;
+       z-index: 1000;
+       background-color: rgba(240, 240, 240, 0.5);
+       color: #3E8DE3;
+}
+
+div.carPic_float h2 {margin: 0;}
+div.carPic_float p {margin: 0 0 10px 0;}
+
+div.carPic_float span.carPic_button {
+  background-color: #3E8DE3;
+  padding: 10px;
+  display: inline-block;}
+div.carPic_float span.carPic_button a {
+  text-decoration: none;
+  color:#fff;}
+
+div.carPic_float span.carPic_button:hover {
+  background-color: #fff;
+  border-bottom: 3px solid #3E8DE3;
+  border-right: 3px solid #3E8DE3;}
+div.carPic_float span.carPic_button:hover a {color: #04060D;}
+
+
+div#carReview ul {padding-inline-start: 20px;}
+div#carReview ul > li {line-height: 2em;}
+
+div#carUpgrade_grid {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: center;}
+
+div.carUpgrade {
+  width: 47%;
+  margin: 5px;
+  text-align: center;
+}
+
+div.carUpgrade span.carUpgrade_icon {
+  display: block;
+  background-color: #3E8DE3;
+  padding: 10px;
+  height: 100px;}
+
+div.carUpgrade a:hover span.carUpgrade_icon {
+  display: block;
+  background-color: #fff;
+  border-bottom: 3px solid #3E8DE3;
+  border-right: 3px solid #3E8DE3;}
+
+div.carUpgrade a:hover {
+  text-decoration: none;
+  color:#04060D;}
+
+/***** Footer *****/
+
+
+/***** wider than 600 px *****/
+
+@media screen and (min-width: 600px) {
+
+div#carPic img {width: auto;}
+}
+
+/***** wider than 823 px *****/
+
+@media screen and (min-width: 823px) {
+
+  body {background: #fff url('../images/site/small_check.jpg');}
+
+  div#wrapper {
+    background: #fff;
+    border:5px solid #3E8DE3;
+    border-radius: 5px;
+    padding: 5px;}
+
+  div#carWrapper {
+    display: flow-root;
+    position: relative;}
+
+  div#carReview {
+    position: relative;
+    float: right;
+    }
+
+  div#carUpgrades {
+    position: relative;
+    float: left;
+    width: 390px;
+  }
+}
