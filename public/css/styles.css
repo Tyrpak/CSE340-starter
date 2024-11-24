@@ -24,13 +24,20 @@ a {
 
 a:hover {color: #143AA2;}
 
+p.error {
+  color: red; 
+  text-transform: uppercase; 
+  text-align: center;
+  font-weight: bold;
+}
+
 /***** Header *****/
 
 header {display: inline; padding: 5px;}
 header a { color: #04060D;}
 header a:hover {color: #143AA2;}
 header span.siteName a {font-size: 2em; font-weight: bold;}
-header div#tools {display: inline; float: right;}
+header div#tools {display: inline; float: right; padding-right: 5px;}
 header div#tools a {text-transform: capitalize;}
 
 /***** Nav *****/
