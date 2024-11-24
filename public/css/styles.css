@@ -17,10 +17,17 @@ body {
   margin: 0 auto;
 }
 
+a {
+  text-decoration: none;
+  color: #04060D;
+}
+
+a:hover {color: #143AA2;}
+
 /***** Header *****/
 
-header {display: inline;}
-header a {text-decoration: none; color: #04060D;}
+header {display: inline; padding: 5px;}
+header a { color: #04060D;}
 header a:hover {color: #143AA2;}
 header span.siteName a {font-size: 2em; font-weight: bold;}
 header div#tools {display: inline; float: right;}
@@ -46,16 +53,15 @@ nav li {
     border-right: 3px solid #3E8DE3;
     }
 
-nav li a {
-  text-decoration: none;
-  color: #fff;
-}
+nav li a { color: #fff;}
 
 nav li:hover a {color: #04060D;}
 
 /***** Main *****/
 
-main h1 {font-size: 1.5em;}
+main {padding: 5px;}
+
+main h1 {font-size: 1.5em; text-align: center;}
 main h2 {font-size: 1.2em;}
 
 div#carPic {position: relative;}
@@ -77,9 +83,7 @@ div.carPic_float span.carPic_button {
   background-color: #3E8DE3;
   padding: 10px;
   display: inline-block;}
-div.carPic_float span.carPic_button a {
-  text-decoration: none;
-  color:#fff;}
+div.carPic_float span.carPic_button a {color:#fff;}
 
 div.carPic_float span.carPic_button:hover {
   background-color: #fff;
@@ -115,18 +119,63 @@ div.carUpgrade a:hover span.carUpgrade_icon {
   border-bottom: 3px solid #3E8DE3;
   border-right: 3px solid #3E8DE3;}
 
-div.carUpgrade a:hover {
-  text-decoration: none;
-  color:#04060D;}
+div.carUpgrade a:hover {color:#04060D;}
+
+div#inv-display { 
+  display: flex;
+  text-align: center;
+}
+
+div#inv-display ul {
+  max-width: 750px;
+  list-style-type: none; 
+  padding: 0; 
+  margin: auto;
+}
+
+div#inv-display li {
+  width: 250px; 
+  /*text-align: left;*/
+  display: inline-block;
+  text-align: left;
+  padding-bottom: 10px;
+}
+
+div#inv-display li:nth-child(even) {background-color: rgba(62, 141, 227, .1);}
+
+div#inv-display li img {
+  width: 250px;
+  height: 190px;
+  object-fit: contain;
+  object-position: top;
+}
+
+div#inv-display li div.namePrice {
+  padding: 0 5px;
+}
+
+div#inv-item-left div.mileage {background-color: rgba(62, 141, 227, .1);}
+div#inv-item-left div.mileage p {margin: 0px; padding: 1em 0;}
+
+div#inv-item-right img { 
+  max-width: 100%;
+}
 
 /***** Footer *****/
-
+footer {
+  display: inline-block;
+  text-align: left;
+  padding: 5px;
+}
 
 /***** wider than 600 px *****/
 
 @media screen and (min-width: 600px) {
 
 div#carPic img {width: auto;}
+
+div#inv-display li {float: left; }
+
 }
 
 /***** wider than 823 px *****/
@@ -139,7 +188,7 @@ div#carPic img {width: auto;}
     background: #fff;
     border:5px solid #3E8DE3;
     border-radius: 5px;
-    padding: 5px;}
+    }
 
   div#carWrapper {
     display: flow-root;
@@ -155,4 +204,18 @@ div#carPic img {width: auto;}
     float: left;
     width: 390px;
   }
+
+  div#inv-item-display { 
+    display: flex;
+  }
+
+  div#inv-item-right { 
+    max-width: 50%;
+    padding-top: 20px;
+  }
+
+  div#inv-item-right img { 
+    max-width: 400px;
+  }
+
 }
