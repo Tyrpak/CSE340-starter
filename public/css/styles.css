@@ -73,14 +73,14 @@ div.carPic_float {
        top: 0px;
        z-index: 1000;
        background-color: rgba(240, 240, 240, 0.5);
-       color: #3E8DE3;
+       color: #143AA2;
 }
 
 div.carPic_float h2 {margin: 0;}
 div.carPic_float p {margin: 0 0 10px 0;}
 
 div.carPic_float span.carPic_button {
-  background-color: #3E8DE3;
+  background-color: #143AA2;
   padding: 10px;
   display: inline-block;}
 div.carPic_float span.carPic_button a {color:#fff;}
@@ -135,7 +135,6 @@ div#inv-display ul {
 
 div#inv-display li {
   width: 250px; 
-  /*text-align: left;*/
   display: inline-block;
   text-align: left;
   padding-bottom: 10px;
